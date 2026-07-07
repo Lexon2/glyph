@@ -24,7 +24,13 @@ object NotificationHelper {
         manager.createNotificationChannel(channel)
     }
 
+    private fun canPostNotifications(context: Context): Boolean {
+        if (!PermissionUtils.hasNotificationPermission(context)) return false
+        return NotificationManagerCompat.from(context).areNotificationsEnabled()
+    }
+
     fun showRestoreNotification(context: Context) {
+        if (!canPostNotifications(context)) return
         ensureChannels(context)
         val intent = Intent(context, MainActivity::class.java)
         val pendingIntent = PendingIntent.getActivity(
@@ -44,6 +50,7 @@ object NotificationHelper {
     }
 
     fun showAccessibilityDisabledNotification(context: Context) {
+        if (!canPostNotifications(context)) return
         ensureChannels(context)
         val intent = PermissionUtils.accessibilitySettingsIntent()
         val pendingIntent = PendingIntent.getActivity(

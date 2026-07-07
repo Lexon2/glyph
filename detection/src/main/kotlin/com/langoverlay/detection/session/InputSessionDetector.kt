@@ -19,7 +19,6 @@ import kotlinx.coroutines.launch
 class InputSessionDetector(
     private val scope: CoroutineScope,
     private val gracePeriodMs: Long = DEFAULT_GRACE_PERIOD_MS,
-    private val textChangeThrottleMs: Long = DEFAULT_TEXT_CHANGE_THROTTLE_MS,
 ) {
     private val _sessionActive = MutableStateFlow(false)
     val sessionActive: StateFlow<Boolean> = _sessionActive.asStateFlow()
@@ -27,7 +26,6 @@ class InputSessionDetector(
     private var editableFocused = false
     private var imeVisible = false
     private var graceJob: Job? = null
-    private var lastTextChangeAt = 0L
 
     fun onAccessibilityEvent(service: AccessibilityService, event: AccessibilityEvent?) {
         if (event == null) return
@@ -36,20 +34,10 @@ class InputSessionDetector(
             AccessibilityEvent.TYPE_VIEW_ACCESSIBILITY_FOCUSED,
             -> {
                 val source = event.source
-                editableFocused = source?.isEditable == true || hasFocusedEditable(service)
+                editableFocused = isEditableNonPassword(source) || hasFocusedEditable(service)
                 source?.recycle()
                 refreshImeState(service)
                 recomputeSession()
-            }
-
-            AccessibilityEvent.TYPE_VIEW_TEXT_CHANGED -> {
-                val now = System.currentTimeMillis()
-                if (now - lastTextChangeAt >= textChangeThrottleMs) {
-                    lastTextChangeAt = now
-                    editableFocused = true
-                    refreshImeState(service)
-                    recomputeSession()
-                }
             }
 
             AccessibilityEvent.TYPE_WINDOWS_CHANGED,
@@ -105,11 +93,15 @@ class InputSessionDetector(
         }
     }
 
+    private fun isEditableNonPassword(node: AccessibilityNodeInfo?): Boolean {
+        return node?.isEditable == true && node.isPassword != true
+    }
+
     private fun hasFocusedEditable(service: AccessibilityService): Boolean {
         val root = service.rootInActiveWindow ?: return false
         return try {
             val focused = root.findFocus(AccessibilityNodeInfo.FOCUS_INPUT)
-            val editable = focused?.let { it.isEditable || it.isPassword } == true
+            val editable = focused?.let { it.isEditable && !it.isPassword } == true
             focused?.recycle()
             editable
         } catch (_: Exception) {
@@ -133,6 +125,5 @@ class InputSessionDetector(
     companion object {
         private const val TAG = "GlyphSession"
         const val DEFAULT_GRACE_PERIOD_MS = 400L
-        const val DEFAULT_TEXT_CHANGE_THROTTLE_MS = 500L
     }
 }

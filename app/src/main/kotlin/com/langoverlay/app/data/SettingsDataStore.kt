@@ -2,9 +2,11 @@ package com.langoverlay.app.data
 
 import android.content.Context
 import androidx.datastore.core.DataStore
+import androidx.datastore.core.handlers.ReplaceFileCorruptionHandler
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.core.floatPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
@@ -20,6 +22,9 @@ import kotlinx.coroutines.flow.map
 
 private val Context.settingsDataStore: DataStore<Preferences> by preferencesDataStore(
     name = "lang_overlay_settings",
+    corruptionHandler = ReplaceFileCorruptionHandler(
+        produceNewData = { emptyPreferences() },
+    ),
 )
 
 class SettingsDataStore(
@@ -62,11 +67,9 @@ class SettingsDataStore(
                 fontSizeSp = prefs[Keys.FONT_SIZE] ?: OverlayConfig.DEFAULT_FONT_SIZE_SP,
             ),
             startAtBoot = prefs[Keys.START_AT_BOOT] ?: true,
-            shortcut = prefs[Keys.SHORTCUT]?.let { ShortcutPreset.valueOf(it) } ?: ShortcutPreset.ALT_SHIFT,
-            overlayAppearance = prefs[Keys.APPEARANCE]?.let { OverlayAppearance.valueOf(it) }
-                ?: OverlayAppearance.SYSTEM,
-            overlayVisibilityMode = prefs[Keys.OVERLAY_VISIBILITY]?.let { OverlayVisibilityMode.valueOf(it) }
-                ?: OverlayVisibilityMode.AUTO,
+            shortcut = parseEnum(prefs[Keys.SHORTCUT], ShortcutPreset.ALT_SHIFT),
+            overlayAppearance = parseEnum(prefs[Keys.APPEARANCE], OverlayAppearance.SYSTEM),
+            overlayVisibilityMode = parseEnum(prefs[Keys.OVERLAY_VISIBILITY], OverlayVisibilityMode.AUTO),
             onboardingCompleted = prefs[Keys.ONBOARDING_COMPLETED] ?: false,
             currentLanguageId = currentLanguageId,
         )
@@ -84,6 +87,9 @@ class SettingsDataStore(
         prefs[Keys.OVERLAY_VISIBILITY] = updated.overlayVisibilityMode.name
         prefs[Keys.ONBOARDING_COMPLETED] = updated.onboardingCompleted
         prefs[Keys.CURRENT_LANGUAGE_ID] = updated.currentLanguageId
+        prefs.remove(Keys.LANGUAGE_A)
+        prefs.remove(Keys.LANGUAGE_B)
+        prefs.remove(Keys.CURRENT_LAYOUT)
     }
 
     private fun migrateLegacyLanguages(prefs: Preferences): List<com.langoverlay.core.model.LanguageEntry> {
@@ -100,6 +106,11 @@ class SettingsDataStore(
         KeyboardLayout.RU.name -> "ru"
         KeyboardLayout.UA.name -> "ua"
         else -> name.lowercase()
+    }
+
+    private inline fun <reified T : Enum<T>> parseEnum(value: String?, default: T): T {
+        if (value == null) return default
+        return enumValues<T>().find { it.name == value } ?: default
     }
 
     private object Keys {

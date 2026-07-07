@@ -21,9 +21,15 @@ gen/
 out/
 release/
 
-# Signing keys
+# Signing keys and local release config
 *.jks
 *.keystore
+keystore.properties
+signing/*.keystore
+signing/*.jks
+
+# Distribution output (built APKs; checksums are local artifacts)
+dist/
 
 # Runtime logs and device captures (may contain PII: window titles, IME text, paths, UIDs)
 *.log

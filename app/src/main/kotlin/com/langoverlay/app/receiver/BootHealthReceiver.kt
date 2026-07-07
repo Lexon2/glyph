@@ -7,19 +7,23 @@ import android.content.Context
 import android.content.Intent
 import android.os.SystemClock
 import com.langoverlay.app.di.BootHealthEntryPoint
-import com.langoverlay.app.util.NotificationHelper
-import com.langoverlay.app.util.PermissionUtils
-import com.langoverlay.detection.accessibility.AccessibilityServiceLocator
 import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.runBlocking
 
 class BootHealthReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent?) {
-        when (intent?.action) {
-            Intent.ACTION_BOOT_COMPLETED -> scheduleHealthCheck(context)
-            ACTION_HEALTH_CHECK -> performHealthCheck(context)
-        }
+        if (intent?.action != Intent.ACTION_BOOT_COMPLETED) return
+        if (!shouldScheduleHealthCheck(context)) return
+        scheduleHealthCheck(context)
+    }
+
+    private fun shouldScheduleHealthCheck(context: Context): Boolean {
+        val entryPoint = EntryPointAccessors.fromApplication(
+            context.applicationContext,
+            BootHealthEntryPoint::class.java,
+        )
+        return runBlocking { entryPoint.settingsRepository().current().startAtBoot }
     }
 
     private fun scheduleHealthCheck(context: Context) {
@@ -32,28 +36,10 @@ class BootHealthReceiver : BroadcastReceiver() {
         )
     }
 
-    private fun performHealthCheck(context: Context) {
-        val entryPoint = EntryPointAccessors.fromApplication(
-            context.applicationContext,
-            BootHealthEntryPoint::class.java,
-        )
-        val settingsRepository = entryPoint.settingsRepository()
-
-        val settings = runBlocking { settingsRepository.current() }
-        if (!settings.startAtBoot) return
-
-        val a11yEnabled = PermissionUtils.isAccessibilityServiceEnabled(context)
-        val overlayGranted = PermissionUtils.canDrawOverlays(context)
-        val serviceRunning = AccessibilityServiceLocator.isServiceRunning()
-
-        if (!a11yEnabled || !overlayGranted || !serviceRunning) {
-            NotificationHelper.showRestoreNotification(context)
-        }
-    }
-
     private fun healthCheckPendingIntent(context: Context): PendingIntent {
-        val intent = Intent(context, BootHealthReceiver::class.java).apply {
-            action = ACTION_HEALTH_CHECK
+        val intent = Intent(context, HealthCheckReceiver::class.java).apply {
+            action = HealthCheckReceiver.ACTION_HEALTH_CHECK
+            setPackage(context.packageName)
         }
         return PendingIntent.getBroadcast(
             context,
@@ -64,7 +50,6 @@ class BootHealthReceiver : BroadcastReceiver() {
     }
 
     companion object {
-        const val ACTION_HEALTH_CHECK = "com.langoverlay.app.action.HEALTH_CHECK"
         private const val HEALTH_CHECK_REQUEST_CODE = 2001
         private const val BOOT_CHECK_DELAY_MS = 60_000L
     }

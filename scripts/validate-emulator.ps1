@@ -51,9 +51,8 @@ Start-Sleep -Seconds 2
 & $adb shell am start -n "$pkg/.MainActivity"
 Start-Sleep -Seconds 3
 
-Log "=== 8. Boot health check broadcast (should not ANR) ==="
-& $adb shell am broadcast -a com.langoverlay.app.action.HEALTH_CHECK -p $pkg
-Start-Sleep -Seconds 3
+Log "=== 8. Boot health check (internal alarm only; external broadcast removed for security) ==="
+Log "Skipping external HEALTH_CHECK broadcast — receiver is non-exported"
 
 Log "=== 9. Checks ==="
 $appPid = (& $adb shell pidof $pkg).Trim()

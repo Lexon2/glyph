@@ -1,5 +1,6 @@
 package com.langoverlay.app.ui.onboarding
 
+import android.Manifest
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -17,6 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.langoverlay.app.R
@@ -30,6 +33,24 @@ fun OnboardingScreen(
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val context = LocalContext.current
+
+    val notificationPermissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission(),
+    ) { _ ->
+        viewModel.completeOnboarding()
+        onComplete()
+    }
+
+    fun finishOnboarding() {
+        if (PermissionUtils.needsNotificationPermission() &&
+            !PermissionUtils.hasNotificationPermission(context)
+        ) {
+            notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+        } else {
+            viewModel.completeOnboarding()
+            onComplete()
+        }
+    }
 
     val step = when {
         !uiState.accessibilityEnabled -> OnboardingStep.Accessibility
@@ -92,10 +113,7 @@ fun OnboardingScreen(
                 }
                 Spacer(modifier = Modifier.height(8.dp))
                 Button(
-                    onClick = {
-                        viewModel.completeOnboarding()
-                        onComplete()
-                    },
+                    onClick = { finishOnboarding() },
                     modifier = Modifier.fillMaxWidth(),
                 ) {
                     Text(stringResource(R.string.onboarding_finish))

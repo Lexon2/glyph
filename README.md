@@ -13,16 +13,27 @@ Android app that shows a tiny draggable overlay with your current keyboard layou
 
 ## Build
 
-Open the project in **Android Studio** (recommended) or install JDK 17+ and generate the Gradle wrapper:
+Open the project in **Android Studio** (recommended) or install JDK 17+ and use the project Gradle wrapper:
 
-```bash
-gradle wrapper --gradle-version 8.11.1
-./gradlew :app:assembleDebug
-./gradlew :prototype:key-spike:assembleDebug
-./gradlew :core:test
+```powershell
+# Debug (development only)
+.\gradlew.ps1 :app:assembleDebug
+
+# Release (for distribution — requires signing setup)
+.\scripts\build-release.ps1
+```
+
+See [`docs/RELEASE_DISTRIBUTION.md`](docs/RELEASE_DISTRIBUTION.md) for one-time keystore setup, versioning, and the release checklist.
+
+Unit tests:
+
+```powershell
+.\gradlew.ps1 :core:test
 ```
 
 ## Setup (sideload)
+
+Install the **release** APK (`dist/glyph-v*-release.apk`), not the debug build.
 
 1. Install APK
 2. Open app → complete onboarding
