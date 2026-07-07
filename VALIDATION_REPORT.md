@@ -45,7 +45,7 @@
 | Area | Result |
 |------|--------|
 | Debug build | Pass |
-| Core unit tests (ToggleLogic, LanguageStateManager) | Pass |
+| Core unit tests (CycleLogic, LanguageListCodec, LanguageStateManager) | Pass |
 | Instrumented activity launch | Pass |
 | App startup without crash | Pass |
 | Overlay permission handling (appops) | Pass |

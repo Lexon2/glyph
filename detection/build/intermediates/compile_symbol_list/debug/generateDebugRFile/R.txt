@@ -1,6 +1,0 @@
-int color overlay_background_dark 0x0
-int color overlay_background_light 0x0
-int color overlay_text_dark 0x0
-int color overlay_text_light 0x0
-int string accessibility_service_description 0x0
-int xml lang_overlay_accessibility_service 0x0

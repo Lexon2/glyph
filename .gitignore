@@ -1,12 +1,16 @@
 *.iml
-.gradle
+.gradle/
 /local.properties
 /.idea
 .DS_Store
-/build
 /captures
 .externalNativeBuild
-.cxx
+.cxx/
+
+# Gradle / Android build outputs (all modules)
+build/
+**/build/
+.kotlin/
 *.apk
 *.ap_
 *.aab
@@ -16,3 +20,24 @@ bin/
 gen/
 out/
 release/
+
+# Signing keys
+*.jks
+*.keystore
+
+# Runtime logs and device captures (may contain PII: window titles, IME text, paths, UIDs)
+*.log
+logcat*.txt
+*_logcat.txt
+**/batterystats*.txt
+**/meminfo*.txt
+**/windows*.txt
+**/services*.txt
+
+# Local investigation artifacts
+docs/crash-investigation-logcat.txt
+docs/**/*-logcat.txt
+
+# Benchmark soak outputs (adb dumps; keep docs/benchmarks/README.md)
+docs/benchmarks/**/*
+!docs/benchmarks/README.md

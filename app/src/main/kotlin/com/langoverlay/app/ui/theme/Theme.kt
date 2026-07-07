@@ -22,7 +22,7 @@ private val DarkColors = darkColorScheme(
 )
 
 @Composable
-fun LangOverlayTheme(
+fun GlyphTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit,
 ) {

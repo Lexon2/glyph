@@ -45,7 +45,7 @@ object AppModule {
     ): LanguageStateManager {
         return LanguageStateManager(
             scope = scope,
-            persist = { layout -> settingsRepository.persistLayout(layout) },
+            persist = { languageId -> settingsRepository.persistLanguageId(languageId) },
         )
     }
 }

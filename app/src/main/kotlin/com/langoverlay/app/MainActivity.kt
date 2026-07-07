@@ -17,7 +17,7 @@ import androidx.navigation.compose.rememberNavController
 import com.langoverlay.app.ui.onboarding.OnboardingScreen
 import com.langoverlay.app.ui.settings.SettingsScreen
 import com.langoverlay.app.ui.settings.SettingsViewModel
-import com.langoverlay.app.ui.theme.LangOverlayTheme
+import com.langoverlay.app.ui.theme.GlyphTheme
 import com.langoverlay.app.util.NotificationHelper
 import com.langoverlay.app.util.PermissionUtils
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 
         setContent {
-            LangOverlayTheme {
+            GlyphTheme {
                 val navController = rememberNavController()
                 val viewModel: SettingsViewModel = hiltViewModel()
                 val uiState by viewModel.uiState.collectAsStateWithLifecycle()

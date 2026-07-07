@@ -1,6 +1,7 @@
 package com.langoverlay.core.state
 
-import com.langoverlay.core.model.KeyboardLayout
+import com.langoverlay.core.model.AppSettings
+import com.langoverlay.core.model.LanguageEntry
 import com.langoverlay.core.model.LayoutInput
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -12,44 +13,67 @@ import kotlinx.coroutines.launch
 
 class LanguageStateManager(
     private val scope: CoroutineScope,
-    private val persist: suspend (KeyboardLayout) -> Unit,
+    private val persist: suspend (String) -> Unit,
     private val debounceMs: Long = 300L,
 ) {
-    private val _layout = MutableStateFlow(KeyboardLayout.EN)
-    val layout: StateFlow<KeyboardLayout> = _layout.asStateFlow()
+    private val _currentLanguageId = MutableStateFlow("en")
+    val currentLanguageId: StateFlow<String> = _currentLanguageId.asStateFlow()
 
-    private var languageA: KeyboardLayout = KeyboardLayout.EN
-    private var languageB: KeyboardLayout = KeyboardLayout.RU
+    private val _displayLabel = MutableStateFlow("EN")
+    val displayLabel: StateFlow<String> = _displayLabel.asStateFlow()
+
+    private var languages: List<LanguageEntry> = com.langoverlay.core.model.LanguageListCodec.defaultLanguages()
     private var persistJob: Job? = null
 
-    fun updateLanguagePair(languageA: KeyboardLayout, languageB: KeyboardLayout) {
-        this.languageA = languageA
-        this.languageB = languageB
+    fun updateLanguages(newLanguages: List<LanguageEntry>) {
+        require(newLanguages.size >= 2) { "At least two languages are required" }
+        languages = newLanguages
+        val resolved = AppSettings(
+            languages = newLanguages,
+            currentLanguageId = _currentLanguageId.value,
+        ).resolvedCurrentLanguageId()
+        if (resolved != _currentLanguageId.value) {
+            _currentLanguageId.value = resolved
+            schedulePersist(resolved)
+        }
+        updateDisplayLabel()
     }
 
     fun onInput(input: LayoutInput) {
-        val next = ToggleLogic.nextLayout(_layout.value, languageA, languageB, input)
-        if (next != _layout.value) {
-            _layout.value = next
+        val next = CycleLogic.nextLanguageId(_currentLanguageId.value, languages, input)
+        if (next != _currentLanguageId.value) {
+            _currentLanguageId.value = next
+            updateDisplayLabel()
             schedulePersist(next)
         }
     }
 
-    suspend fun restoreLayout(saved: KeyboardLayout) {
-        _layout.value = saved
+    suspend fun restoreLanguageId(savedId: String, configuredLanguages: List<LanguageEntry>) {
+        languages = configuredLanguages
+        val resolved = AppSettings(
+            languages = configuredLanguages,
+            currentLanguageId = savedId,
+        ).resolvedCurrentLanguageId()
+        _currentLanguageId.value = resolved
+        updateDisplayLabel()
     }
 
     suspend fun flush() {
         persistJob?.cancel()
         persistJob = null
-        persist(_layout.value)
+        persist(_currentLanguageId.value)
     }
 
-    private fun schedulePersist(layout: KeyboardLayout) {
+    private fun updateDisplayLabel() {
+        _displayLabel.value = languages.firstOrNull { it.id == _currentLanguageId.value }?.displayLabel
+            ?: _currentLanguageId.value.uppercase()
+    }
+
+    private fun schedulePersist(languageId: String) {
         persistJob?.cancel()
         persistJob = scope.launch {
             delay(debounceMs)
-            persist(layout)
+            persist(languageId)
         }
     }
 }

@@ -5,9 +5,10 @@ import androidx.lifecycle.viewModelScope
 import com.langoverlay.app.data.SettingsRepository
 import com.langoverlay.app.util.PermissionUtils
 import com.langoverlay.core.model.AppSettings
-import com.langoverlay.core.model.KeyboardLayout
+import com.langoverlay.core.model.LanguageEntry
 import com.langoverlay.core.model.OverlayAppearance
 import com.langoverlay.core.model.OverlayConfig
+import com.langoverlay.core.model.OverlayVisibilityMode
 import com.langoverlay.core.model.ShortcutPreset
 import com.langoverlay.detection.accessibility.AccessibilityServiceLocator
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -56,9 +57,9 @@ class SettingsViewModel @Inject constructor(
         permissionRefresh.value++
     }
 
-    fun updateLanguages(languageA: KeyboardLayout, languageB: KeyboardLayout) {
+    fun updateLanguages(languages: List<LanguageEntry>) {
         viewModelScope.launch {
-            repository.updateLanguages(languageA, languageB)
+            repository.updateLanguages(languages)
         }
     }
 
@@ -86,6 +87,12 @@ class SettingsViewModel @Inject constructor(
         viewModelScope.launch {
             val current = repository.current()
             repository.updateOverlay(current.overlay, appearance)
+        }
+    }
+
+    fun updateOverlayVisibility(mode: OverlayVisibilityMode) {
+        viewModelScope.launch {
+            repository.updateOverlayVisibility(mode)
         }
     }
 

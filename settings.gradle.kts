@@ -14,7 +14,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "lang-overlay"
+rootProject.name = "glyph"
 
 include(":core")
 include(":detection")

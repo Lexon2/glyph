@@ -7,6 +7,7 @@ import com.langoverlay.core.state.LanguageStateManager
 import com.langoverlay.detection.accessibility.AccessibilityServiceLocator
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -24,22 +25,28 @@ class AppAccessibilityServiceLocator @Inject constructor(
     init {
         AccessibilityServiceLocator.install(this)
         applicationScope.launch {
-            settingsRepository.settings.collect { settings ->
-                cachedSettings = settings
-            }
+            settingsRepository.settings
+                .distinctUntilChanged()
+                .collect { settings ->
+                    cachedSettings = settings
+                }
         }
     }
 
     override suspend fun bootstrapFromStorage() {
         val settings = settingsRepository.current()
         cachedSettings = settings
-        languageStateManager.updateLanguagePair(settings.languageA, settings.languageB)
-        languageStateManager.restoreLayout(settings.currentLayout)
+        languageStateManager.updateLanguages(settings.languages)
+        languageStateManager.restoreLanguageId(
+            savedId = settings.resolvedCurrentLanguageId(),
+            configuredLanguages = settings.languages,
+        )
     }
 
     override fun currentSettings(): AppSettings = cachedSettings
 
-    override fun settingsFlow(): Flow<AppSettings> = settingsRepository.settings
+    override fun settingsFlow(): Flow<AppSettings> =
+        settingsRepository.settings.distinctUntilChanged()
 
     override fun onOverlayPositionChanged(anchorX: Float, anchorY: Float) {
         applicationScope.launch {

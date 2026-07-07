@@ -16,6 +16,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Switch
@@ -30,7 +31,6 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.langoverlay.app.R
-import com.langoverlay.core.model.KeyboardLayout
 import com.langoverlay.core.model.OverlayAppearance
 import com.langoverlay.core.model.OverlayConfig
 import com.langoverlay.core.model.ShortcutPreset
@@ -59,9 +59,8 @@ fun SettingsScreen(
             StatusCard(uiState)
 
             SectionTitle(stringResource(R.string.settings_languages))
-            LanguagePairSelector(
-                languageA = settings.languageA,
-                languageB = settings.languageB,
+            LanguageManagerSection(
+                languages = settings.languages,
                 onLanguagesChanged = viewModel::updateLanguages,
             )
 
@@ -75,6 +74,15 @@ fun SettingsScreen(
             OverlayAppearanceSelector(
                 selected = settings.overlayAppearance,
                 onSelected = viewModel::updateAppearance,
+            )
+
+            Text(
+                text = stringResource(R.string.settings_overlay_visibility),
+                style = MaterialTheme.typography.bodyMedium,
+            )
+            OverlayVisibilitySelector(
+                selected = settings.overlayVisibilityMode,
+                onSelected = viewModel::updateOverlayVisibility,
             )
 
             LabeledSlider(
@@ -103,7 +111,7 @@ fun SettingsScreen(
                 )
             }
 
-            androidx.compose.material3.OutlinedButton(
+            OutlinedButton(
                 onClick = viewModel::resetOverlayPosition,
                 modifier = Modifier.fillMaxWidth(),
             ) {
@@ -159,36 +167,6 @@ private fun StatusRow(label: String, ok: Boolean) {
 private fun SectionTitle(text: String) {
     Text(text = text, style = MaterialTheme.typography.titleMedium)
     HorizontalDivider()
-}
-
-@Composable
-private fun LanguagePairSelector(
-    languageA: KeyboardLayout,
-    languageB: KeyboardLayout,
-    onLanguagesChanged: (KeyboardLayout, KeyboardLayout) -> Unit,
-) {
-    Text(stringResource(R.string.settings_language_a))
-    LanguageRow(languageA) { newA ->
-        if (newA != languageB) onLanguagesChanged(newA, languageB)
-    }
-    Spacer(modifier = Modifier.height(8.dp))
-    Text(stringResource(R.string.settings_language_b))
-    LanguageRow(languageB) { newB ->
-        if (newB != languageA) onLanguagesChanged(languageA, newB)
-    }
-}
-
-@Composable
-private fun LanguageRow(selected: KeyboardLayout, onSelected: (KeyboardLayout) -> Unit) {
-    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        KeyboardLayout.entries.forEach { layout ->
-            FilterChip(
-                selected = layout == selected,
-                onClick = { onSelected(layout) },
-                label = { Text(layout.label) },
-            )
-        }
-    }
 }
 
 @Composable

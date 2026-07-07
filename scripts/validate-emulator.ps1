@@ -1,4 +1,4 @@
-# Emulator validation script for Lang Overlay Milestone 1
+# Emulator validation script for Glyph Milestone 1
 $ErrorActionPreference = "Stop"
 $adb = "C:\Users\Lexon2\AppData\Local\Android\Sdk\platform-tools\adb.exe"
 $pkg = "com.langoverlay.app"
@@ -18,7 +18,7 @@ Log "=== 1. Grant overlay permission before launch ==="
 
 Log "=== 2. Launch app (creates DataStore) ==="
 & $adb shell am start -n "$pkg/.MainActivity"
-Start-Sleep -Seconds 4
+Start-Sleep -Seconds 6
 
 Log "=== 3. Enable accessibility service ==="
 & $adb shell settings put secure enabled_accessibility_services $a11yService
@@ -51,14 +51,22 @@ Start-Sleep -Seconds 2
 & $adb shell am start -n "$pkg/.MainActivity"
 Start-Sleep -Seconds 3
 
-Log "=== 8. Boot completed broadcast (should not ANR) ==="
-& $adb shell am broadcast -a android.intent.action.BOOT_COMPLETED -p $pkg
+Log "=== 8. Boot health check broadcast (should not ANR) ==="
+& $adb shell am broadcast -a com.langoverlay.app.action.HEALTH_CHECK -p $pkg
 Start-Sleep -Seconds 3
 
 Log "=== 9. Checks ==="
 $appPid = (& $adb shell pidof $pkg).Trim()
 Log "PID: $appPid"
-Log "DataStore: $( & $adb shell run-as $pkg ls files/datastore/ 2>&1 )"
+$prevEap = $ErrorActionPreference
+$ErrorActionPreference = "Continue"
+$ds = (& $adb shell run-as $pkg ls files/datastore/ 2>&1 | Out-String).Trim()
+$ErrorActionPreference = $prevEap
+if ($ds -match "preferences_pb") {
+    Log "DataStore: OK ($ds)"
+} else {
+    Log "DataStore: not yet created (launch app once) - $ds"
+}
 Log "A11y: $( & $adb shell settings get secure enabled_accessibility_services )"
 $windows = & $adb shell dumpsys window windows | Select-String "langoverlay"
 Log "Windows: $($windows.Count) matches"

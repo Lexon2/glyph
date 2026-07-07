@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lang Overlay</string>
+    <string name="app_name">Glyph</string>
     <string name="settings_title">Settings</string>
     <string name="settings_languages">Languages</string>
-    <string name="settings_language_a">Language A</string>
-    <string name="settings_language_b">Language B</string>
+    <string name="settings_languages_order_hint">Order must match Samsung Keyboard language order.</string>
+    <string name="settings_languages_add">Add language</string>
+    <string name="settings_languages_rename">Rename label</string>
+    <string name="settings_languages_remove">Remove</string>
+    <string name="settings_languages_min_required">At least two languages are required.</string>
+    <string name="settings_languages_search">Search languages</string>
+    <string name="settings_languages_catalog_name">%1$s (%2$s)</string>
     <string name="settings_shortcut">Layout switch shortcut</string>
     <string name="settings_overlay">Overlay</string>
+    <string name="settings_overlay_visibility">Overlay visibility</string>
+    <string name="overlay_visibility_auto">Auto (while typing)</string>
+    <string name="overlay_visibility_always">Always show</string>
     <string name="settings_opacity">Opacity</string>
     <string name="settings_font_size">Font size (sp)</string>
     <string name="settings_start_at_boot">Start overlay on boot</string>
@@ -19,20 +27,23 @@
     <string name="status_service">Overlay service running</string>
     <string name="status_ok">OK</string>
     <string name="status_missing">Missing</string>
-    <string name="onboarding_title">Setup Lang Overlay</string>
-    <string name="onboarding_accessibility_body">Enable the Lang Overlay accessibility service so the app can detect keyboard layout shortcuts and show the overlay in the background.</string>
+    <string name="onboarding_title">Setup Glyph</string>
+    <string name="onboarding_accessibility_body">Enable the Glyph accessibility service so the app can detect keyboard layout shortcuts and show the overlay while you type.</string>
     <string name="onboarding_restricted_settings">On Android 13+, open App info → ⋮ menu → Allow restricted settings before enabling accessibility.</string>
     <string name="onboarding_open_app_info">Open App info</string>
     <string name="onboarding_enable_accessibility">Open Accessibility settings</string>
     <string name="onboarding_overlay_body">Grant display over other apps permission so the layout indicator can appear above other applications.</string>
     <string name="onboarding_grant_overlay">Grant overlay permission</string>
-    <string name="onboarding_battery_body">Disable battery optimization for Lang Overlay. On Samsung: Settings → Battery → Background usage limits → remove this app from Sleeping apps.</string>
+    <string name="onboarding_battery_body">Disable battery optimization for Glyph. On Samsung: Settings → Battery → Background usage limits → remove this app from Sleeping apps.</string>
     <string name="onboarding_battery_button">Open battery settings</string>
     <string name="onboarding_finish">Finish setup</string>
     <string name="onboarding_refresh">Refresh status</string>
     <string name="notification_channel_alerts">Alerts</string>
-    <string name="notification_restore_title">Restore Lang Overlay</string>
+    <string name="notification_restore_title">Restore Glyph</string>
     <string name="notification_restore_body">Tap to re-enable permissions or the accessibility service.</string>
     <string name="notification_a11y_title">Accessibility service disabled</string>
-    <string name="notification_a11y_body">Re-enable Lang Overlay in Accessibility settings.</string>
+    <string name="notification_a11y_body">Re-enable Glyph in Accessibility settings.</string>
+    <string name="dialog_rename_label">Display label</string>
+    <string name="dialog_confirm">Confirm</string>
+    <string name="dialog_cancel">Cancel</string>
 </resources>

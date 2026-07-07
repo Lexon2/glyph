@@ -12,7 +12,7 @@ import com.langoverlay.app.R
 
 object NotificationHelper {
 
-    private const val CHANNEL_ALERTS = "lang_overlay_alerts"
+    private const val CHANNEL_ALERTS = "glyph_alerts"
 
     fun ensureChannels(context: Context) {
         val manager = context.getSystemService(NotificationManager::class.java)

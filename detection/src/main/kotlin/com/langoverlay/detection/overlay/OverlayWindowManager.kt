@@ -13,7 +13,6 @@ import android.view.WindowManager
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import com.langoverlay.core.model.KeyboardLayout
 import com.langoverlay.core.model.OverlayAppearance
 import com.langoverlay.core.model.OverlayConfig
 import com.langoverlay.detection.R
@@ -58,7 +57,7 @@ class OverlayWindowManager(
         val params = createLayoutParams()
         applyAppearance(label, frame)
         applyPosition(params)
-        updateLabelText(label, KeyboardLayout.EN)
+        updateLabelText(label, "EN")
 
         frame.setOnTouchListener { _, event -> handleTouch(event, params, frame) }
 
@@ -75,8 +74,8 @@ class OverlayWindowManager(
         layoutParams = null
     }
 
-    fun updateLayout(layout: KeyboardLayout) {
-        labelView?.let { updateLabelText(it, layout) }
+    fun updateLayout(displayLabel: String) {
+        labelView?.let { updateLabelText(it, displayLabel) }
     }
 
     fun updateConfig(newConfig: OverlayConfig, newAppearance: OverlayAppearance) {
@@ -204,8 +203,8 @@ class OverlayWindowManager(
         label.setTextColor(textColor)
     }
 
-    private fun updateLabelText(label: TextView, layout: KeyboardLayout) {
-        label.text = layout.label
+    private fun updateLabelText(label: TextView, displayLabel: String) {
+        label.text = displayLabel
     }
 
     private fun dp(value: Int): Int {
