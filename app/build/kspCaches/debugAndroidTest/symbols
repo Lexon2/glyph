@@ -1,0 +1,1 @@
+{"src\\androidTest\\kotlin\\com\\langoverlay\\app\\MainActivityTest.kt":["appContextHasCorrectPackage:com.langoverlay.app.MainActivityTest","activityRule:com.langoverlay.app.MainActivityTest","mainActivityLaunchesWithoutCrashing:com.langoverlay.app.MainActivityTest","MainActivityTest:com.langoverlay.app","<init>:com.langoverlay.app.MainActivityTest"]}

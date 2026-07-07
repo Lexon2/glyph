@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="key_spike_description">Phase 0 key event spike for Lang Overlay. Logs keyboard shortcuts to an on-screen overlay.</string>
+</resources>

@@ -1,0 +1,189 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:2:1-33:12
+MERGED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.core:core-ktx:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\89ff2c9b1cb4fe3dff6b2ded19439b4e\transformed\core-ktx-1.15.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b601708dcce78d6e4179c146e6a79710\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\8b7ec36e25eaf3e7130850e61cd351eb\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\46ef3c98bd5e3781faf6e49d16c0cd5d\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\4ce77afad9ce7ee70c5ba240fd044c9d\transformed\tracing-1.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b4d5305d007b14de1de6e5e7d93bf772\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\e3b7b52bf2e15247ef029098cde1a752\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\ea379c1777350b2610587248fb14c0c6\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:2:1-7:12
+	package
+		INJECTED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:4:5-78
+	android:name
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:4:22-75
+application
+ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:6:5-32:19
+INJECTED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:6:5-32:19
+MERGED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\46ef3c98bd5e3781faf6e49d16c0cd5d\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\46ef3c98bd5e3781faf6e49d16c0cd5d\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b4d5305d007b14de1de6e5e7d93bf772\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b4d5305d007b14de1de6e5e7d93bf772\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+	android:label
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:9:9-34
+	android:icon
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:8:9-62
+	android:allowBackup
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:7:9-36
+	android:theme
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:10:9-72
+activity#com.langoverlay.prototype.keyspike.SpikeActivity
+ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:12:9-19:20
+	android:exported
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:14:13-36
+	android:name
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:13:13-42
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:15:13-18:29
+action#android.intent.action.MAIN
+ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:16:17-69
+	android:name
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:16:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:17:17-77
+	android:name
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:17:27-74
+service#com.langoverlay.prototype.keyspike.KeySpikeAccessibilityService
+ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:21:9-31:19
+	android:exported
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:23:13-37
+	android:permission
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:24:13-79
+	android:name
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:22:13-57
+intent-filter#action:name:android.accessibilityservice.AccessibilityService
+ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:25:13-27:29
+action#android.accessibilityservice.AccessibilityService
+ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:26:17-92
+	android:name
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:26:25-89
+meta-data#android.accessibilityservice
+ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:28:13-30:75
+	android:resource
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:30:17-72
+	android:name
+		ADDED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml:29:17-60
+uses-sdk
+INJECTED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml
+INJECTED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml
+MERGED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\89ff2c9b1cb4fe3dff6b2ded19439b4e\transformed\core-ktx-1.15.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\89ff2c9b1cb4fe3dff6b2ded19439b4e\transformed\core-ktx-1.15.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b601708dcce78d6e4179c146e6a79710\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b601708dcce78d6e4179c146e6a79710\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\8b7ec36e25eaf3e7130850e61cd351eb\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\8b7ec36e25eaf3e7130850e61cd351eb\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\46ef3c98bd5e3781faf6e49d16c0cd5d\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\46ef3c98bd5e3781faf6e49d16c0cd5d\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\4ce77afad9ce7ee70c5ba240fd044c9d\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\4ce77afad9ce7ee70c5ba240fd044c9d\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b4d5305d007b14de1de6e5e7d93bf772\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b4d5305d007b14de1de6e5e7d93bf772\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\e3b7b52bf2e15247ef029098cde1a752\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\e3b7b52bf2e15247ef029098cde1a752\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\ea379c1777350b2610587248fb14c0c6\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\ea379c1777350b2610587248fb14c0c6\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+	android:targetSdkVersion
+		INJECTED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\pet-projects\lang-overlay\prototype\key-spike\src\main\AndroidManifest.xml
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+permission#com.langoverlay.prototype.keyspike.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+uses-permission#com.langoverlay.prototype.keyspike.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\46ef3c98bd5e3781faf6e49d16c0cd5d\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\46ef3c98bd5e3781faf6e49d16c0cd5d\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\a024ac2997765663d16b528ae46be33e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#1E88E5</color>
+    <string name="app_name">Lang Overlay</string>
+    <string name="appearance_dark">Dark</string>
+    <string name="appearance_light">Light</string>
+    <string name="appearance_system">System</string>
+    <string name="notification_a11y_body">Re-enable Lang Overlay in Accessibility settings.</string>
+    <string name="notification_a11y_title">Accessibility service disabled</string>
+    <string name="notification_channel_alerts">Alerts</string>
+    <string name="notification_restore_body">Tap to re-enable permissions or the accessibility service.</string>
+    <string name="notification_restore_title">Restore Lang Overlay</string>
+    <string name="onboarding_accessibility_body">Enable the Lang Overlay accessibility service so the app can detect keyboard layout shortcuts and show the overlay in the background.</string>
+    <string name="onboarding_battery_body">Disable battery optimization for Lang Overlay. On Samsung: Settings → Battery → Background usage limits → remove this app from Sleeping apps.</string>
+    <string name="onboarding_battery_button">Open battery settings</string>
+    <string name="onboarding_enable_accessibility">Open Accessibility settings</string>
+    <string name="onboarding_finish">Finish setup</string>
+    <string name="onboarding_grant_overlay">Grant overlay permission</string>
+    <string name="onboarding_open_app_info">Open App info</string>
+    <string name="onboarding_overlay_body">Grant display over other apps permission so the layout indicator can appear above other applications.</string>
+    <string name="onboarding_refresh">Refresh status</string>
+    <string name="onboarding_restricted_settings">On Android 13+, open App info → ⋮ menu → Allow restricted settings before enabling accessibility.</string>
+    <string name="onboarding_title">Setup Lang Overlay</string>
+    <string name="settings_font_size">Font size (sp)</string>
+    <string name="settings_language_a">Language A</string>
+    <string name="settings_language_b">Language B</string>
+    <string name="settings_languages">Languages</string>
+    <string name="settings_opacity">Opacity</string>
+    <string name="settings_overlay">Overlay</string>
+    <string name="settings_reset_position">Reset overlay position</string>
+    <string name="settings_shortcut">Layout switch shortcut</string>
+    <string name="settings_start_at_boot">Start overlay on boot</string>
+    <string name="settings_title">Settings</string>
+    <string name="status_accessibility">Accessibility service</string>
+    <string name="status_missing">Missing</string>
+    <string name="status_ok">OK</string>
+    <string name="status_overlay">Display over other apps</string>
+    <string name="status_service">Overlay service running</string>
+    <style name="Theme.LangOverlay" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>

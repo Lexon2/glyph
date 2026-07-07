@@ -1,0 +1,2 @@
+-keep,allowobfuscation,allowshrinking class com.langoverlay.app.ui.settings.SettingsViewModel
+-keep,allowobfuscation,allowshrinking class com.langoverlay.app.ui.settings.SettingsViewModel

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="overlay_background_dark">#2D2D2D</color>
+    <color name="overlay_background_light">#F5F5F5</color>
+    <color name="overlay_text_dark">#FFFFFF</color>
+    <color name="overlay_text_light">#212121</color>
+    <string name="accessibility_service_description">Shows a small overlay with the current keyboard layout and detects layout-switch shortcuts from your external keyboard.</string>
+</resources>

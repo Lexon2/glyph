@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.langoverlay.core.state.ToggleLogicTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-07-07T04:23:13" hostname="DESKTOP-5N221NT" time="0.006">
+  <properties/>
+  <testcase name="toggle RU to EN()" classname="com.langoverlay.core.state.ToggleLogicTest" time="0.001"/>
+  <testcase name="toggle EN to UA pair()" classname="com.langoverlay.core.state.ToggleLogicTest" time="0.001"/>
+  <testcase name="toggle EN to RU()" classname="com.langoverlay.core.state.ToggleLogicTest" time="0.001"/>
+  <testcase name="sync from system overrides toggle()" classname="com.langoverlay.core.state.ToggleLogicTest" time="0.001"/>
+  <testcase name="unknown current snaps to languageA on toggle()" classname="com.langoverlay.core.state.ToggleLogicTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

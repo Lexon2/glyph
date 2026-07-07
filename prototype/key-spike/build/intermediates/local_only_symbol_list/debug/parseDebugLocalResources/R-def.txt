@@ -1,0 +1,4 @@
+R_DEF: Internal format may change without notice
+local
+string key_spike_description
+xml key_spike_accessibility_service

@@ -1,0 +1,195 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.langoverlay.app"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:4:5-78
+11-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:4:22-75
+12    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+12-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:5:5-81
+12-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:5:22-78
+13    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+13-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:6:5-77
+13-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:6:22-74
+14
+15    <permission
+15-->[androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+16        android:name="com.langoverlay.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+16-->[androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+17        android:protectionLevel="signature" />
+17-->[androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+18
+19    <uses-permission android:name="com.langoverlay.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+19-->[androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+19-->[androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+20
+21    <application
+21-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:8:5-49:19
+22        android:name="com.langoverlay.app.LangOverlayApplication"
+22-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:9:9-47
+23        android:allowBackup="true"
+23-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:10:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.15.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\cd763ea085b21b2c3a383aa7d9cb89d4\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+25        android:debuggable="true"
+26        android:extractNativeLibs="false"
+27        android:icon="@mipmap/ic_launcher"
+27-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:11:9-43
+28        android:label="@string/app_name"
+28-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:12:9-41
+29        android:roundIcon="@mipmap/ic_launcher_round"
+29-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:13:9-54
+30        android:supportsRtl="true"
+30-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:14:9-35
+31        android:theme="@style/Theme.LangOverlay" >
+31-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:15:9-49
+32        <activity
+32-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:17:9-25:20
+33            android:name="com.langoverlay.app.MainActivity"
+33-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:18:13-41
+34            android:exported="true"
+34-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:19:13-36
+35            android:theme="@style/Theme.LangOverlay" >
+35-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:20:13-53
+36            <intent-filter>
+36-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:21:13-24:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:22:17-69
+37-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:22:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:23:17-77
+39-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:23:27-74
+40            </intent-filter>
+41        </activity>
+42
+43        <service
+43-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:27:9-37:19
+44            android:name="com.langoverlay.detection.accessibility.LangOverlayAccessibilityService"
+44-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:28:13-99
+45            android:exported="false"
+45-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:29:13-37
+46            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+46-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:30:13-79
+47            <intent-filter>
+47-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:31:13-33:29
+48                <action android:name="android.accessibilityservice.AccessibilityService" />
+48-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:32:17-92
+48-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:32:25-89
+49            </intent-filter>
+50
+51            <meta-data
+51-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:34:13-36:78
+52                android:name="android.accessibilityservice"
+52-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:35:17-60
+53                android:resource="@xml/lang_overlay_accessibility_service" />
+53-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:36:17-75
+54        </service>
+55
+56        <receiver
+56-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:39:9-48:20
+57            android:name="com.langoverlay.app.receiver.BootHealthReceiver"
+57-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:40:13-56
+58            android:exported="true" >
+58-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:41:13-36
+59            <intent-filter>
+59-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:42:13-44:29
+60                <action android:name="android.intent.action.BOOT_COMPLETED" />
+60-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:43:17-79
+60-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:43:25-76
+61            </intent-filter>
+62            <intent-filter>
+62-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:45:13-47:29
+63                <action android:name="com.langoverlay.app.action.HEALTH_CHECK" />
+63-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:46:17-82
+63-->E:\pet-projects\lang-overlay\app\src\main\AndroidManifest.xml:46:25-79
+64            </intent-filter>
+65        </receiver>
+66
+67        <provider
+67-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\e7fd2c395dcc5af468954c9cfdcbcf03\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+68            android:name="androidx.startup.InitializationProvider"
+68-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\e7fd2c395dcc5af468954c9cfdcbcf03\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+69            android:authorities="com.langoverlay.app.androidx-startup"
+69-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\e7fd2c395dcc5af468954c9cfdcbcf03\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+70            android:exported="false" >
+70-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\e7fd2c395dcc5af468954c9cfdcbcf03\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+71            <meta-data
+71-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\e7fd2c395dcc5af468954c9cfdcbcf03\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+72                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+72-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\e7fd2c395dcc5af468954c9cfdcbcf03\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+73                android:value="androidx.startup" />
+73-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\e7fd2c395dcc5af468954c9cfdcbcf03\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+74            <meta-data
+74-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\4df7a8ffc2f8322fd25661384ef56c61\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
+75                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+75-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\4df7a8ffc2f8322fd25661384ef56c61\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
+76                android:value="androidx.startup" />
+76-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\4df7a8ffc2f8322fd25661384ef56c61\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
+77            <meta-data
+77-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+78                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+78-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+79                android:value="androidx.startup" />
+79-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+80        </provider>
+81
+82        <activity
+82-->[androidx.compose.ui:ui-test-manifest:1.7.6] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\20c8398b40b3a43e043515754d7984d5\transformed\ui-test-manifest-1.7.6\AndroidManifest.xml:23:9-25:39
+83            android:name="androidx.activity.ComponentActivity"
+83-->[androidx.compose.ui:ui-test-manifest:1.7.6] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\20c8398b40b3a43e043515754d7984d5\transformed\ui-test-manifest-1.7.6\AndroidManifest.xml:24:13-63
+84            android:exported="true" />
+84-->[androidx.compose.ui:ui-test-manifest:1.7.6] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\20c8398b40b3a43e043515754d7984d5\transformed\ui-test-manifest-1.7.6\AndroidManifest.xml:25:13-36
+85        <activity
+85-->[androidx.compose.ui:ui-tooling-android:1.7.6] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\c1c71fc68db3c813cd442504033025be\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+86            android:name="androidx.compose.ui.tooling.PreviewActivity"
+86-->[androidx.compose.ui:ui-tooling-android:1.7.6] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\c1c71fc68db3c813cd442504033025be\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+87            android:exported="true" />
+87-->[androidx.compose.ui:ui-tooling-android:1.7.6] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\c1c71fc68db3c813cd442504033025be\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+88
+89        <receiver
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+90            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+91            android:directBootAware="false"
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+92            android:enabled="true"
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+93            android:exported="true"
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+94            android:permission="android.permission.DUMP" >
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+95            <intent-filter>
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+96                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+97            </intent-filter>
+98            <intent-filter>
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+99                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+100            </intent-filter>
+101            <intent-filter>
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+102                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+103            </intent-filter>
+104            <intent-filter>
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+105                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\b7d769a7e504ee299b0766d80bf5068a\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+106            </intent-filter>
+107        </receiver>
+108    </application>
+109
+110</manifest>

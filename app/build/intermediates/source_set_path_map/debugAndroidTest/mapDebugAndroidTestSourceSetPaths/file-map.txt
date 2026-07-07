@@ -1,0 +1,6 @@
+com.langoverlay.app.test.app-core-1.6.1-0 C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\2cac521ac42462881e1bb32eb508215f\transformed\core-1.6.1\res
+com.langoverlay.app.test.app-tracing-1.2.0-1 C:\Users\Lexon2\AppData\Local\Temp\cursor-sandbox-cache\77e458dff8232675af6db945e922eaa0\gradle\caches\8.11.1\transforms\4ce77afad9ce7ee70c5ba240fd044c9d\transformed\tracing-1.2.0\res
+com.langoverlay.app.test.app-androidTest-2 E:\pet-projects\lang-overlay\app\build\generated\res\resValues\androidTest\debug
+com.langoverlay.app.test.app-mergeDebugAndroidTestResources-3 E:\pet-projects\lang-overlay\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.langoverlay.app.test.app-mergeDebugAndroidTestResources-4 E:\pet-projects\lang-overlay\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.langoverlay.app.test.app-debugAndroidTest-5 E:\pet-projects\lang-overlay\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

@@ -1,0 +1,7 @@
+com.langoverlay.detection
+color overlay_background_dark
+color overlay_background_light
+color overlay_text_dark
+color overlay_text_light
+string accessibility_service_description
+xml lang_overlay_accessibility_service
